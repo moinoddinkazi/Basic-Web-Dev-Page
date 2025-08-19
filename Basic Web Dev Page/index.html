@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DriveNow Rentals — Book a Car</title>
+    <meta name="description" content="Rent a car by the hour. Modern UI with multiple models, specs, and quick booking." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top glass-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">DriveNow<span class="text-primary">.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#fleet">Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <a href="#fleet" class="btn btn-light ms-lg-3 fw-semibold">Browse Cars</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-4 fw-extrabold mb-3 fade-in-1">Book your perfect ride in minutes</h1>
+            <p class="lead text-white-50 mb-4 fade-in-2">Hourly rentals. Transparent pricing. Modern vehicles. Pick a car, choose your hours, and go.</p>
+            <div class="d-flex gap-2 fade-in-3">
+              <a href="#fleet" class="btn btn-primary btn-lg px-4">Explore Fleet</a>
+              <a href="#how" class="btn btn-outline-light btn-lg px-4">How it works</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block text-end">
+            <div class="hero-card shadow-lg">
+              <div class="small text-uppercase text-white-50">Average price</div>
+              <div class="display-6 fw-bold">$18<span class="fs-5 text-white-50">/hr</span></div>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark me-2">Free cancellation</span>
+                <span class="badge bg-light text-dark">24/7 support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- decorative blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+    </header>
+
+    <!-- Fleet -->
+    <section id="fleet" class="py-5 bg-light">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+          <div>
+            <h2 class="fw-bold mb-1">Our Fleet</h2>
+            <p class="text-muted mb-0">Choose from economy to luxury. Prices shown are per hour.</p>
+          </div>
+          <div class="d-none d-md-flex gap-2">
+            <span class="badge rounded-pill bg-dark-subtle text-dark">Economy</span>
+            <span class="badge rounded-pill bg-dark-subtle text-dark">SUV</span>
+            <span class="badge rounded-pill bg-dark-subtle text-dark">EV</span>
+            <span class="badge rounded-pill bg-dark-subtle text-dark">Luxury</span>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Car 1 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="Toyota Corolla" loading="lazy" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1640&auto=format&fit=crop" />
+                <span class="price-badge">$12/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">Toyota Corolla</h5>
+                  <span class="badge bg-success">Economy</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">Automatic</li>
+                  <li class="badge rounded-pill bg-light text-dark">AC</li>
+                  <li class="badge rounded-pill bg-light text-dark">4 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="Toyota Corolla" data-price="12">Book now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 2 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="Honda Civic" loading="lazy" src="https://www.topgear.com/sites/default/files/images/cars-road-test/carousel/2016/11/6de4f62aba448e2de410c088d486f4f6/dynamic-exterior-201.jpg?w=1784&h=1004" />
+                <span class="price-badge">$14/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">Honda Civic</h5>
+                  <span class="badge bg-primary">Sedan</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">Automatic</li>
+                  <li class="badge rounded-pill bg-light text-dark">Bluetooth</li>
+                  <li class="badge rounded-pill bg-light text-dark">5 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="Honda Civic" data-price="14">Book now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 3 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="Tesla Model 3" loading="lazy" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1640&auto=format&fit=crop" />
+                <span class="price-badge">$22/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">Tesla Model 3</h5>
+                  <span class="badge bg-success">EV</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">Autopilot</li>
+                  <li class="badge rounded-pill bg-light text-dark">Long Range</li>
+                  <li class="badge rounded-pill bg-light text-dark">5 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="Tesla Model 3" data-price="22">Book now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 4 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="BMW X5" loading="lazy" src="https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=1640&auto=format&fit=crop" />
+                <span class="price-badge">$28/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">BMW X5</h5>
+                  <span class="badge bg-dark">SUV</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">AWD</li>
+                  <li class="badge rounded-pill bg-light text-dark">Panoramic Roof</li>
+                  <li class="badge rounded-pill bg-light text-dark">5 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="BMW X5" data-price="28">Book now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 5 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="Mercedes C-Class" loading="lazy" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1640&auto=format&fit=crop" />
+                <span class="price-badge">$26/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">Mercedes C-Class</h5>
+                  <span class="badge bg-warning text-dark">Luxury</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">Leather</li>
+                  <li class="badge rounded-pill bg-light text-dark">Adaptive Cruise</li>
+                  <li class="badge rounded-pill bg-light text-dark">5 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="Mercedes C-Class" data-price="26">Book now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 6 -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="card car-card h-100 border-0 shadow-sm">
+              <div class="position-relative overflow-hidden">
+                <img class="card-img-top car-img" alt="Mazda MX-5" loading="lazy" src="https://www.topgear.com/sites/default/files/2023/10/1%20Mazda%20MX-5%202024.jpg" />
+                <span class="price-badge">$20/hr</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <h5 class="card-title mb-0">Mazda MX-5</h5>
+                  <span class="badge bg-danger">Convertible</span>
+                </div>
+                <ul class="spec-list list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li class="badge rounded-pill bg-light text-dark">Manual</li>
+                  <li class="badge rounded-pill bg-light text-dark">Sport</li>
+                  <li class="badge rounded-pill bg-light text-dark">2 Seats</li>
+                </ul>
+                <button class="btn btn-primary w-100 book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal" data-model="Mazda MX-5" data-price="20">Book now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 reveal">
+            <div class="p-4 h-100 rounded-4 shadow-sm bg-white step-card">
+              <div class="step-number">1</div>
+              <h5 class="mb-2">Select a car</h5>
+              <p class="text-muted mb-0">Browse our fleet and pick the model that fits your plan and budget.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal">
+            <div class="p-4 h-100 rounded-4 shadow-sm bg-white step-card">
+              <div class="step-number">2</div>
+              <h5 class="mb-2">Choose hours</h5>
+              <p class="text-muted mb-0">Pick your date, start time, and duration. The price updates instantly.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal">
+            <div class="p-4 h-100 rounded-4 shadow-sm bg-white step-card">
+              <div class="step-number">3</div>
+              <h5 class="mb-2">Confirm & drive</h5>
+              <p class="text-muted mb-0">Submit the form and you’re set. Pick up your car and enjoy the ride.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / footer -->
+    <footer id="contact" class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h4 class="fw-bold">Questions? We're here to help.</h4>
+            <p class="text-white-50 mb-0">Email support@drivenow.example or call +1 (555) 016-0000</p>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <a href="#fleet" class="btn btn-primary me-2">See cars</a>
+            <a href="#" class="btn btn-outline-light">Back to top</a>
+          </div>
+        </div>
+        <hr class="border-secondary my-4" />
+        <div class="d-flex justify-content-between align-items-center small text-white-50">
+          <span>© <span id="year"></span> DriveNow Rentals</span>
+          <span>Made with Bootstrap 5</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book <span id="modalCarModel">Car</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="bookingForm" class="needs-validation" novalidate>
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" id="custName" placeholder="Jane Doe" required />
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="custEmail" placeholder="jane@example.com" required />
+                  <div class="invalid-feedback">Please enter a valid email</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Pick-up date</label>
+                  <input type="date" class="form-control" id="pickDate" required />
+                  <div class="invalid-feedback">Select a date</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Start time</label>
+                  <input type="time" class="form-control" id="startTime" required />
+                  <div class="invalid-feedback">Select a start time</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Hours</label>
+                  <input type="number" min="1" max="24" value="2" class="form-control" id="hours" required />
+                  <div class="invalid-feedback">Enter 1–24 hours</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Extras</label>
+                  <div class="d-flex flex-wrap gap-2">
+                    <div class="form-check">
+                      <input class="form-check-input extra" type="checkbox" value="5" id="gps">
+                      <label class="form-check-label" for="gps">GPS $5</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input extra" type="checkbox" value="7" id="child">
+                      <label class="form-check-label" for="child">Child seat $7</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input extra" type="checkbox" value="10" id="insurance">
+                      <label class="form-check-label" for="insurance">Insurance $10</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total-box mt-4 p-3 rounded-3 bg-light d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="small text-muted">Estimated total</div>
+                  <div class="h4 mb-0 fw-bold"><span id="currency">$</span><span id="total">0</span></div>
+                </div>
+                <div class="text-muted small">
+                  Base <span id="modalBase">$0</span>/hr × <span id="modalHours">2</span>h + extras
+                </div>
+              </div>
+
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                <label class="form-check-label" for="terms">I accept the terms and conditions</label>
+                <div class="invalid-feedback">You must accept before booking</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Confirm booking</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+      <div id="toast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Booking confirmed! Check your email for details.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

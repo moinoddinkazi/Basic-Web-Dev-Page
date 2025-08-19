@@ -1,0 +1,105 @@
+:root {
+  --bg: #0b0f14;
+  --accent: #0d6efd;
+  --glass: rgba(255, 255, 255, 0.06);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 10% -10%, #1a2330 0%, transparent 60%),
+              radial-gradient(1000px 700px at 110% 10%, #142338 0%, transparent 50%),
+              var(--bg);
+  color: #fff;
+}
+
+.fw-extrabold {
+  font-weight: 800;
+}
+
+.glass-nav {
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  min-height: 92vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1rem;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  transform: translateY(20px);
+  animation: floatIn 900ms ease 300ms both;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blob {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.45;
+  animation: blob 12s ease-in-out infinite;
+}
+.blob-1 { background: #0d6efd; top: -3rem; left: -3rem; }
+.blob-2 { background: #6610f2; top: 4rem; right: 15%; animation-delay: -3s; }
+.blob-3 { background: #20c997; bottom: -4rem; left: 35%; animation-delay: -6s; }
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -10px) scale(1.05); }
+  66% { transform: translate(-10px, 15px) scale(0.97); }
+}
+
+.fade-in-1 { animation: fadeUp 700ms ease both 200ms; }
+.fade-in-2 { animation: fadeUp 700ms ease both 350ms; }
+.fade-in-3 { animation: fadeUp 700ms ease both 500ms; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fleet cards */
+.car-card { transition: transform .25s ease, box-shadow .25s ease; border-radius: 16px; }
+.car-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
+.car-img { height: 200px; object-fit: cover; }
+.price-badge { position: absolute; bottom: 12px; left: 12px; background: #0d6efd; color: #fff; padding: 6px 10px; border-radius: 100px; font-weight: 700; }
+.spec-list .badge { font-weight: 500; }
+
+/* Steps */
+.step-card { position: relative; overflow: hidden; }
+.step-number { position: absolute; right: 16px; top: 8px; font-weight: 800; font-size: 56px; line-height: 1; color: rgba(13,110,253,0.08); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(16px); }
+.reveal.revealed { opacity: 1; transform: none; transition: all .7s ease; }
+
+/* Total box */
+.total-box { border: 1px dashed rgba(0,0,0,0.1); }
+
+/* Footer */
+footer { background: #0b1320; }
+
+/* Utilities override */
+.bg-dark-subtle { background: rgba(255,255,255,0.6) !important; }
+
+@media (max-width: 992px) {
+  .hero { padding-top: 5rem; padding-bottom: 3rem; }
+}
+
+
